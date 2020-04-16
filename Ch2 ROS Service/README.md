@@ -75,9 +75,10 @@ if __name__ == '__main__':
 
 <div align=center>
 
-<img src="https://github.com/alonzo3569/ROS/blob/master/Ch2%20ROS%20Service/ROS_Service_Server.png"/>
+<img src="https://github.com/alonzo3569/ROS/blob/master/Ch2%20ROS%20Service/ROS_Service_Server.png"/><br></br>
 <b>Fig. Run server and activate "/add_two_ints" service</b><br></br>
-<img src="https://github.com/alonzo3569/ROS/blob/master/Ch2%20ROS%20Service/ROS_Service_Client.png"/>
+
+<img src="https://github.com/alonzo3569/ROS/blob/master/Ch2%20ROS%20Service/ROS_Service_Client.png"/><br></br>
 <b>Fig. Run client</b><br></br>
 
 </div>
