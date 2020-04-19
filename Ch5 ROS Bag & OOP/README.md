@@ -126,7 +126,7 @@ int main (int argc, char **argv)
 
 ## Work With Multiple Catkin Workspaces
 
-* __Note :__
-Only the last setup.bash in ~/.bashrc will be sourced.
-Thus, source manually to overwrite enc params or modify bashrc.
+* __Note :__  
+Only the last setup.bash in ~/.bashrc will be implemented.
+Thus, source manually to overwrite env params or modify bashrc.  
 
