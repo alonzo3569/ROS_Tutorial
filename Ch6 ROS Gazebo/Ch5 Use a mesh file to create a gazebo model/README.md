@@ -1,5 +1,5 @@
 ## How to use a mesh file to create a gazebo model
-```
+```console
 1. Create meshes folders
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel/]$ mkdir meshes
 
