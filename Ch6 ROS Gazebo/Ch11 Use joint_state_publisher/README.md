@@ -7,7 +7,7 @@
 roslaunch my_robot_description rviz.launch
  
 3. A joint1 terminal apprears on the screen
-4. Drag joint bar to reotate joint1 object
+4. Drag joint bar to rotate joint1 object
 
 * rviz.launch
 ```xml
