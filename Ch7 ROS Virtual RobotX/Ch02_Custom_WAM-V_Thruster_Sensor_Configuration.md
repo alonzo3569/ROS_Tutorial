@@ -2,21 +2,45 @@
 
 ```console
 1. Make a directory for your custom WAM-V 
-mkdir ~/my_wamv
+$ mkdir ~/my_wamv
 
 2. Touch and edit .yaml file
-vim ~/my_wamv/sensor_config.yaml
-vim ~/my_wamv/thruster_config.yaml
+$ vim ~/my_wamv/sensor_config.yaml
+$ vim ~/my_wamv/thruster_config.yaml
 
-3. Generate .urdf 
-roslaunch vrx_gazebo generate_wamv.launch thruster_yaml:=$HOME/my_wamv/thruster_config.yaml sensor_yaml:=$HOME/my_wamv/sensor_config.yaml wamv_target:=$HOME/my_wamv/my_wamv.urdf
-roslaunch vrx_gazebo generate_wamv.launch thruster_yaml:=$HOME/my_wamv/thruster_config.yaml sensor_yaml:=$HOME/my_wamv/sensor_config.yaml wamv_target:=$HOME/my_wamv/my_wamv_2.urdf
-roslaunch vrx_gazebo generate_wamv.launch thruster_yaml:=$HOME/my_wamv/thruster_config.yaml sensor_yaml:=$HOME/my_wamv/sensor_config.yaml wamv_target:=$HOME/my_wamv/my_wamv_3.urdf
+3. Generate .urdf from launch file
+Usage: roslaunch vrx_gazebo generate_wamv.launch thruster_yaml:={ } sensor_yaml:={ } wamv_target:={ }
+
+Params:
+    thruster_yaml: Input, the full path of the thruster YAML
+    sensor_yaml: Input, the full path of the sensor YAML configuration
+    wamv_target: Output, the path where WAM-V URDF will be generated
+    
+Note: (1) If yaml path is not given, it uses default thruster/sensor yaml
+      (2) Create WAM-V with no thruster and no sensors
+          thruster_yaml: empty_thruster_config.yaml
+          sensor_yaml: empty_sensor_config.yaml
+
+# Case 1
+$ roslaunch vrx_gazebo generate_wamv.launch thruster_yaml:=$HOME/my_wamv/thruster_config.yaml sensor_yaml:=$HOME/my_wamv/sensor_config.yaml wamv_target:=$HOME/my_wamv/my_wamv.urdf
+
+# Case2
+$ roslaunch vrx_gazebo generate_wamv.launch thruster_yaml:=$HOME/my_wamv/thruster_config.yaml sensor_yaml:=$HOME/my_wamv/sensor_config.yaml wamv_target:=$HOME/my_wamv/my_wamv_2.urdf
+
+# Case 3 (Non-compliant)
+$ roslaunch vrx_gazebo generate_wamv.launch thruster_yaml:=$HOME/my_wamv/thruster_config.yaml sensor_yaml:=$HOME/my_wamv/sensor_config.yaml wamv_target:=$HOME/my_wamv/my_wamv_3.urdf
+
 
 4. Launch the example world with your WAM-V
-roslaunch vrx_gazebo sandisland.launch urdf:=$HOME/my_wamv/my_wamv.urdf
-roslaunch vrx_gazebo sandisland.launch urdf:=$HOME/my_wamv/my_wamv_2.urdf
-roslaunch vrx_gazebo sandisland.launch urdf:=$HOME/my_wamv/my_wamv_3.urdf
+
+# Case 1
+$ roslaunch vrx_gazebo sandisland.launch urdf:=$HOME/my_wamv/my_wamv.urdf
+
+# Case 2
+$ roslaunch vrx_gazebo sandisland.launch urdf:=$HOME/my_wamv/my_wamv_2.urdf
+
+# Case 3
+$ roslaunch vrx_gazebo sandisland.launch urdf:=$HOME/my_wamv/my_wamv_3.urdf
 ```
 
 * sensor_config.yaml
