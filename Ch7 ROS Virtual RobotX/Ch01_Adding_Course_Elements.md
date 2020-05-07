@@ -1,5 +1,3 @@
-# Vrx tutorials
-
 ## Adding course elements
 ```console
 1. Create a ros pkg
@@ -104,29 +102,29 @@ roslaunch vrx_gazebo sandisland.launch world:=`pwd`/my_world.world
 * __Generating XML from xacro__
   * __From Terminal:__ To generate `my_wamv.urdf` from `my_wamv.urdf.xacro`, run this command:  
   `$ rosrun xacro xacro --inorder my_wamv.urdf.xacro -o my_wamv.urdf`
-  * __In CMakeLists.txt__ (Allows you to find this issue at build time, not runtime)
-```
-find_package(catkin REQUIRED COMPONENTS
-  xacro  <= Add this line
-)
-```
-```
-xacro_add_files(
-  worlds/example_course.world.xacro
-  INORDER INSTALL DESTINATION worlds <= This will generate devel/share/worlds/your_project_name/example_course.world in your workspace.
-)
-```
-  * __In launch file__
-```
-<?xml version="1.0"?>
-<launch>
-  <arg name="urdf" default="$(find my_package)/urdf/wamv_gazebo.urdf"/>
-  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg urdf)"/>
-  <!-- ROS PARAMETERS: * /robot_description: <?xml version="1.... -->
-</launch>
-```
+  * __In CMakeLists.txt:__ (Allows you to find this issue at build time, not runtime)
+  ```
+  find_package(catkin REQUIRED COMPONENTS
+    xacro  <= Add this line
+  )
+  ```
+  ```
+  xacro_add_files(
+    worlds/example_course.world.xacro
+    INORDER INSTALL DESTINATION worlds <= This will generate devel/share/worlds/your_project_name/example_course.world in your workspace.
+  )
+  ```
+  * __In launch file:__
+  ```
+  <?xml version="1.0"?>
+  <launch>
+    <arg name="urdf" default="$(find my_package)/urdf/wamv_gazebo.urdf"/>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg urdf)"/>
+    <!-- ROS PARAMETERS: * /robot_description: <?xml version="1.... -->
+  </launch>
+  ```
 
-* __Using Macros__
+* __Using Macros__  
 Here is an example macro included to create a gazebo camera sensor with the ROS plugin.
 * wamv_camera.xacro (ROS plugin/Xacro template)
 ```xml
