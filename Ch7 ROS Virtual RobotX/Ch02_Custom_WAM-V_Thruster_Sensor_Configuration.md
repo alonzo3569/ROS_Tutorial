@@ -1,4 +1,4 @@
-## Creating a custom WAM-V Thruster and Sensor Configuration For Competition
+## Custom WAM-V Thruster and Sensor Configuration
 
 1. **Make a directory for your custom WAM-V**
 ```console
