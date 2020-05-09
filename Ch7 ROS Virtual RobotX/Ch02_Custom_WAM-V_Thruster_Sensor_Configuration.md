@@ -283,13 +283,29 @@ engine:
 * If you call __generate_wamv.launch__ on __non-compliant configuration YAML files__, red error messages will be printed but the URDF file will still be created. However, it is not a valid configuration for the VRX competition.
 
 * `generate_wamv.launch`: (generate_wamv python exe => import configure_wamv.py)
-  * Input: Thruster/sensor configurations YAML files
+  * Input: Thruster/Sensor configurations YAML files
   * Output: Robot urdf file
   * Check YAML files compliance
   * Generate xacro files from YAML (YAML -> xacro)
   * Generate urdf file (xacro -> urdf -> robot)
   * In fact, it's configure_wamv.py doing all the stuff.(Compliance -> YAML -> xacro -> urdf)
   * To know how to convert YAML to urdf, check out __configure_wamv.py__
+
+* __Thruster/Sensor Required Parameters in thruster/sensor_config.yaml__
+  * In __wamv_camera.xacro__: (Import/Use by generate_wamv/configure_wamv.py(?) to generate wamv urdf)
+  ```xml
+  <xacro:macro name="wamv_camera" params="name x:=0.5 y:=0 z:=1.5 R:=0 P:=0 Y:=0 post_Y:=0">
+  ```
+    * Required params: name (Must define in sensor_config.yaml)
+    * Default  params: x,y,z,R,P,Y
+  * In __engine.xacro__:
+  ```xml
+  <xacro:macro name="engine" params="prefix position:='0 0 0' orientation:='0 0 0'">
+  ```
+    * Required params: prefix (Must define in thruster_config.yaml)
+    * Default  params: position, orientation
+
+
 
 * Sensor bounding box:
 ```
