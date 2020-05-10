@@ -17,7 +17,7 @@ $ roslaunch vrx_gazebo sandisland.launch
     ```console
     roslaunch vrx_gazebo usv_keydrive.launch
     ```
-      * Make sure node `/twist2thrust` is publishing cmd to topic `left/right_thrust_cmd`(which gazebo is subscribing)
+      * Make sure node `/twist2thrust` is publishing cmd to topic `left/right_thrust_cmd`(which gazebo is subscribing) <br></br>
       
       <div align=center>
 
@@ -30,22 +30,23 @@ $ roslaunch vrx_gazebo sandisland.launch
       * Change `/wamv/thrusters/left_thrust_cmd` to `left_thrust_cmd`
       ```xml
       <remap from="left_cmd" to="left_thrust_cmd"/>
-      <remap from="right_cmd" to="right_thrust_cmd"/> <br></br>
-      ```
+      <remap from="right_cmd" to="right_thrust_cmd"/> 
+      ```<br></br>
       
       <div align=center>
 
-      <img src="Ch7 ROS Virtual RobotX/figure/driving_debug_before.png"/><br></br>
+      <img src="https://github.com/alonzo3569/ROS/blob/master/Ch7%20ROS%20Virtual%20RobotX/figure/driving_debug_before.png"/><br></br>
 
       </div> 
       
       * Debug:
         * `rosrun rqt_graph rqt_graph`
-        * `rosnode/rostopic info/list` <br></br>
+        * `rosnode/rostopic info/list` 
+        <br></br>
       
       <div align=center>
 
-      <img src="Ch7 ROS Virtual RobotX/figure/keyboard_debug_after.png"/><br></br>
+      <img src="https://github.com/alonzo3569/ROS/blob/master/Ch7%20ROS%20Virtual%20RobotX/figure/keyboard_debug_after.png"/><br></br>
 
       </div> 
       
