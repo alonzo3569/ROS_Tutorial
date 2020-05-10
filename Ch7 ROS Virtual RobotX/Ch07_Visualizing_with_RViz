@@ -1,6 +1,0 @@
-## Visualizing with RViz
-
-1. Launching Gazebo
-```console
-$ roslaunch vrx_gazebo vrx.launch camera_enabled:=true gps_enabled:=true imu_enabled:=true
-```
