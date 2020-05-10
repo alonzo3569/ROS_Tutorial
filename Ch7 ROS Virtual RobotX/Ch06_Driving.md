@@ -27,13 +27,12 @@ $ roslaunch vrx_gazebo sandisland.launch
       
       * If gazebo isn't getting any message from node `/twist2thrust` (as shown in figure)
       * Modify `~/vrx_ws/src/vrx/vrx_gazebo/launch/usv_keydrive.launch`
-      * Change `/wamv/thrusters/left_thrust_cmd` to `left_thrust_cmd`
+      * Change `/wamv/thrusters/left_thrust_cmd` to `left_thrust_cmd` <br></br>
       
       ```xml
       <remap from="left_cmd" to="left_thrust_cmd"/>
       <remap from="right_cmd" to="right_thrust_cmd"/> 
       ```
-      <br></br>
       
       <div align=center>
 
