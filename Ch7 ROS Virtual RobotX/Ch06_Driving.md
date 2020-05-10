@@ -8,14 +8,14 @@ $ roslaunch vrx_gazebo sandisland.launch
 2. __Teleoperation :__
     1. __rostopic pub__
     ```console
-    rostopic pub --once /right_thrust_cmd std_msgs/Float32 "data: 1.0"
+    $ rostopic pub --once /right_thrust_cmd std_msgs/Float32 "data: 1.0"
     ```
       * This command will timeout after a pre-determined amount of time 
       * Default is 1.0 s, but can be changed in the __wamv_gazebo_thruster_config.xacro__
       * `<maxCmd>1.0</maxCmd>` <br></br>
     2. __Keyboard__
     ```console
-    roslaunch vrx_gazebo usv_keydrive.launch
+    $ roslaunch vrx_gazebo usv_keydrive.launch
     ```
       * Make sure node `/twist2thrust` is publishing cmd to topic `left/right_thrust_cmd`(which gazebo is subscribing) <br></br>
       
