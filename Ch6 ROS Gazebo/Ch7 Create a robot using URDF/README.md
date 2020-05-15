@@ -10,7 +10,7 @@
 [alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ touch robot.urdf
 
 4. Create .launch file in launch folder
-[alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ touch spawn.lunch (paste spawn.launch)
+[alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ touch spawn.launch (paste spawn.launch)
 
 5. Launch
 [alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ roslaunch my_robot_description spawn.launch
