@@ -1,7 +1,7 @@
 ## How to visualize a robot URDF using RVIZ
 ```console
 1. Create rviz.launch in launch folder
-[alonzo@study ~/simulation_ws/src/my_robot_description/launch]$ touch rviz.launch (paste rviz.launch code)
+[alonzo@study ~/simulation_ws/src/my_robot_description/launch]$ touch rviz.launch
 
 2. Launch
 [alonzo@study ~/simulation_ws/src/my_robot_description/launch]$ roslaunch my_robot_description rviz.launch
