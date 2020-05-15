@@ -19,7 +19,7 @@ $ roslaunch vrx_gazebo vrx.launch camera_enabled:=true gps_enabled:=true imu_ena
   * Note : Odom frame
 
   * Method 2: 
-  Using a custom URDF without the standard GPS/IMU configuration, run the `robot_state_publisher``
+  Using a custom URDF without the standard GPS/IMU configuration, run the `robot_state_publisher`
   ```console
   $ rosrun robot_state_publisher robot_state_publisher
   ```
