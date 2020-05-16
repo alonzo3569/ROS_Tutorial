@@ -6,7 +6,7 @@
 
 2. Configure your rviz in GUI
 
-3. Save config as option
+3. Select "Save config as" option
 
 4. Store .rivz in ~/simulation_ws/src/my_robot_description/rviz
 
