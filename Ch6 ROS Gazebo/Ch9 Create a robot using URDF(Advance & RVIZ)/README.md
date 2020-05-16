@@ -1,6 +1,6 @@
 ## Create a robot using URDF (Advance + RVIZ)
 ```console
-1. Edit .urdf, and link and joint (paste robot.urdf code)
+1. Edit .urdf, and link and joint
 [alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ vim robot.urdf
 
 2. Launch
