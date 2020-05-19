@@ -31,3 +31,66 @@ cp /usr/share/gazebo-9/worlds/heightmap.world model.sdf
 12. Remove all the "box" model in model.sdf
 
 13. 
+
+* model.sdf
+```xml
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <!-- Change Here -->
+    <model name="custom_lake">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <heightmap>
+              <!-- Change Here -->
+              <uri>model://custom_lake/materials/textures/custom_lake.png</uri>
+              <!-- Determine the size of terrain-->
+              <!-- These value doesn't have to match the size of your image-->
+              <!-- 10: The highest point-->
+              <size>200 200 10</size>
+              <pos>0 0 0</pos>
+            </heightmap>
+          </geometry>
+        </collision>
+        <visual name="visual_abcedf">
+          <geometry>
+            <heightmap>
+              <use_terrain_paging>false</use_terrain_paging>
+              <texture>
+                <diffuse>file://media/materials/textures/dirt_diffusespecular.png</diffuse>
+                <normal>file://media/materials/textures/flat_normal.png</normal>
+                <size>1</size>
+              </texture>
+              <texture>
+                <diffuse>file://media/materials/textures/grass_diffusespecular.png</diffuse>
+                <normal>file://media/materials/textures/flat_normal.png</normal>
+                <size>1</size>
+              </texture>
+              <texture>
+                <diffuse>file://media/materials/textures/fungus_diffusespecular.png</diffuse>
+                <normal>file://media/materials/textures/flat_normal.png</normal>
+                <size>1</size>
+              </texture>
+              <blend>
+                <min_height>2</min_height>
+                <fade_dist>5</fade_dist>
+              </blend>
+              <blend>
+                <min_height>4</min_height>
+                <fade_dist>5</fade_dist>
+              </blend>
+              <!-- Change Here -->
+              <uri>model://custom_lake/materials/textures/custom_lake.png</uri>
+              <!-- Determine the size of terrain-->
+              <!-- These value doesn't have to match the size of your image-->
+              <!-- 10: The highest point-->
+              <size>200 200 10</size>
+              <pos>0 0 0</pos>
+            </heightmap>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+</sdf>
+```
