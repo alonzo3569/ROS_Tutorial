@@ -1,21 +1,30 @@
 ## Create a robot using URDF
+
+1. **Create a pkg for your robot**
 ```console
-1. Create a pkg for your robot
 [alonzo@study ~/simulation_ws/src]$ catkin_create_pkg my_robot_description # No dependcies
+```
 
-2. Create folder urdf & launch in my_robot_description pkg
+2. **Create folder urdf & launch in my_robot_description pkg**
+```console
 [alonzo@study ~/simulation_ws/src/my_robot_description]$ mkdir urdf launch
-
-3. Create .urdf file and edit
+```
+3. **Create .urdf file and edit**
+```console
 [alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ touch robot.urdf
+```
 
-4. Create .launch file in launch folder
+4. **Create .launch file in launch folder**
+```console
 [alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ touch spawn.launch (paste spawn.launch)
+```
 
-5. Launch
+5. **Launch**
+```console
 [alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ roslaunch my_robot_description spawn.launch
 ```
 
+### Source code
 * robot.urdf
 ```xml
 <?xml version="1.0" ?>
