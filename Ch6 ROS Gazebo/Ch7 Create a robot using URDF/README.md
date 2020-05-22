@@ -16,7 +16,7 @@
 
 4. **Create .launch file in launch folder**
 ```console
-[alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ touch spawn.launch (paste spawn.launch)
+[alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ touch spawn.launch
 ```
 
 5. **Launch**
