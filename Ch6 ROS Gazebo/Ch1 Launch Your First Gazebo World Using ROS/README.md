@@ -1,30 +1,31 @@
 ## Launch Your First Gazebo World Using ROS
-1. Create your own workspace and pkg
+1. **Create your own workspace and pkg**
 ```console
 [alonzo@study ~]$ mkdir -p simulation_ws/src
 [alonzo@study ~/simulation_ws/src]$ catkin_create_pkg my_simulations # No dependencies
 [alonzo@study ~/simulation_ws]$ catkin_make
 ```
-2. Create launch and world folder
+2. **Create launch and world folder**
 ```console
 [alonzo@study ~/simulation_ws/src/my_simulations]$ mkdir launch world
 ```
 
-3. Create and edit your .launch file
+3. **Create and edit your .launch file**
 ```console
 [alonzo@study ~/simulation_ws/src/my_simulations/launch]$ touch my_world.launch
 ```
 
-4. Create and edit your .world file
+4. **Create and edit your .world file**
 ```console
 [alonzo@study ~/simulation_ws/src/my_simulations/world]$ touch empty_world.world
 ```
 
-5. Launch your Gazebo world
+5. **Launch your Gazebo world**
 ```console
 [alonzo@study ~]$ roslaunch my_simulations my_world.launch
 ```
 
+### Source code
 * my_world.launch
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -65,6 +66,7 @@
 </sdf>
 ```
 
+### Appendix
 * empty_world.launch (Caution: "This is a launch file!")
 ```xml
 <?xml version="1.0"?>
