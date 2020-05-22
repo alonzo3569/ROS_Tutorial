@@ -77,8 +77,7 @@
 
         <!-- include gazebo_ros launcher -->
         <include file="$(find gazebo_ros)/launch/empty_world.launch">
-                <!-- Remove the line below to load empty_world.launch in gazebo_ros pkg, not my_simulations pkg-->
-                <!-- <arg name="world_name" value="$(arg world)" /> -->
+                <arg name="world_name" value="$(arg world)" />
                 <arg name="debug" value="$(arg debug)" />
                 <arg name="gui" value="$(arg gui)" />
                 <arg name="paused" value="$(arg pause)" />
