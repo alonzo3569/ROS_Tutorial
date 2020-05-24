@@ -1,14 +1,17 @@
 ## Use joint_state_publisher
 
-1. Edit rviz.launch file, change gui to "True"  
+1. **Edit rviz.launch file, change gui to "True"**
   * `<param name="use_gui" value="True"/>`
 
-2. Launch rviz
-roslaunch my_robot_description rviz.launch
- 
-3. A joint1 terminal apprears on the screen
-4. Drag joint bar to rotate joint1 object
+2. **Launch rviz**
+```console
+$ roslaunch my_robot_description rviz.launch
+```
 
+3. **A joint1 terminal apprears on the screen**
+4. **Drag joint bar to rotate joint1 object**
+
+## Source code
 * rviz.launch
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -30,10 +33,10 @@ roslaunch my_robot_description rviz.launch
   <!-- Same as rosrun rviz rviz   -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_robot_description)/rviz/robot.rviz"/>
 
-
 </launch>
 ```
 
+## Appendix
 * __ROS node :__
   * __`joint_state_publisher`:__
     * This package publishes [sensor_msgs/JointState][0] messages for a robot. 
