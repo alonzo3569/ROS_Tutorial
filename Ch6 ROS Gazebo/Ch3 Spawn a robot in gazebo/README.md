@@ -1,25 +1,26 @@
 ## Spawn a robot in gazebo
 
-1. Clone this repository (two-wheeled-robot-simulation pkg)
+1. **Clone this repository (two-wheeled-robot-simulation pkg)**
 ```console
 [alonzo@study ~/simulation_ws/src]$ git clone https://bitbucket.org/theconstructcore/two-wheeled-robot-simulation
 ```
 
-2. View .xacro file
+2. **View .xacro file**
 ```console
 [alonzo@study ~/simulation_ws/src/two-wheeled-robot-simulation/urdf]$ vim m2wr.xacro
 ```
 
-3. View .launch file
+3. **View .launch file**
 ```console
 [alonzo@study ~/simulation_ws/src/two-wheeled-robot-simulation/launch]$ vim spawn.launch
 ```
 
-4. Launch
+4. **Launch**
 ```console
 [alonzo@study ~/simulation_ws/src/two-wheeled-robot-simulation/launch]$ roslaunch two-wheeled-robot-simulation spawn.launch
 ```
 
+## Source code
 * m2wr.xacro
 ```xml
 <?xml version="1.0" ?>
