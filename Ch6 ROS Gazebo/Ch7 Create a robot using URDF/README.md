@@ -24,7 +24,7 @@
 [alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ roslaunch my_robot_description spawn.launch
 ```
 
-### Source code
+## Source code
 * robot.urdf
 ```xml
 <?xml version="1.0" ?>
