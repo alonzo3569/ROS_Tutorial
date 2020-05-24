@@ -1,16 +1,19 @@
 ## Create a robot using URDF (Advance + RVIZ)
+1. **Edit .urdf, and link and joint**
 ```console
-1. Edit .urdf, and link and joint
 [alonzo@study ~/simulation_ws/src/my_robot_description/urdf]$ vim robot.urdf
-
-2. Launch
-[alonzo@study ~/simulation_ws/src/my_robot_description]$ roslaunch my_robot_description rviz.launch
-
-3. In Rviz GUI, press Add
-4. Choose RobotModel option
-5. To remove error, change global options "Fixed Frame: map" to link_chassis 
 ```
 
+2. **Launch**
+```console
+[alonzo@study ~/simulation_ws/src/my_robot_description]$ roslaunch my_robot_description rviz.launch
+```
+
+3. **In Rviz GUI, press Add**
+4. **Choose RobotModel option**
+5. **To remove error, change global options "Fixed Frame: map" to link_chassis**
+
+## Source code
 * robot.urdf
 ```xml
 <?xml version="1.0" ?>
