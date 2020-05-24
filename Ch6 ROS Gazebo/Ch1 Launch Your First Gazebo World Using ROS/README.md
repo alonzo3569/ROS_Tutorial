@@ -25,7 +25,7 @@
 [alonzo@study ~]$ roslaunch my_simulations my_world.launch
 ```
 
-### Source code
+## Source code
 * my_world.launch
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -66,7 +66,7 @@
 </sdf>
 ```
 
-### Appendix
+## Appendix
 * empty_world.launch (Caution: "This is a launch file!")
 ```xml
 <?xml version="1.0"?>
