@@ -359,12 +359,12 @@ roslaunch vrx_gazebo sandisland.launch world:=`pwd`/my_world.world
 ```
 
 ## Working with xacro files
-* __What is xacro?__
-  * A programmable xml file
-* __Functionality:__
-  * Include other files, 
-  * Define functions, store variables(macros). 
-* The VRX packages make heavy use of xacro to reduce code reuse and make composing new models/worlds easy.
+### What is xacro?
+* A programmable xml file
+### Functionality
+* Include other files 
+* Define functions, store variables(macros). 
+* VRX packages make heavy use of xacro to reduce code reuse and make composing new models/worlds easy.
 
 ### Generating XML from xacro
   * __From Terminal:__ To generate `my_wamv.urdf` from `my_wamv.urdf.xacro`, run this command:  
