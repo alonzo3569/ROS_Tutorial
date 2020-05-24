@@ -4,28 +4,35 @@
   * SDF  :  SDF is used for entire robotic simulation environments.
   * URDF :  Only for robot description.
 
+1. **Create a directory for gazebo model in a ros package**
 ```console
-1. Create a directory for gazebo model in a ros package
 [alonzo@study ~/simulation_ws/src/my_simulations]$ mkdir models
 [alonzo@study ~/simulation_ws/src/my_simulations/models]$ mkdir {your_model_name}
 [alonzo@study ~/simulation_ws/src/my_simulations/models]$ mkdir my1stmodel
-
-2. Create .sdf and .config
-[alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ model.sdf
-[alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ model.config (paste code)
-
-4. Add model path to env param GAZEBO_MODEL_PATH
-[alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:{your_model_model_path}
-[alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/ual/simulation_ws/src/my_simulations/models
-
-5. Modify .world file, <include> your model
-[alonzo@study ~/simulation_ws/src/my_simulations/world]$ vim empty_world.world
-# > Add : <uri>model://my1stmodel</uri>
-
-6. Launch
-[alonzo@study ~/simulation_ws/src/my_simulations/world]$ roslaunch my_simulations my_world.launch 
 ```
 
+2. **Create .sdf and .config**
+```console
+[alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ model.sdf
+[alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ model.config (paste code)
+```
+
+4. **Add model path to env param GAZEBO_MODEL_PATH**
+```console
+[alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:{your_model_model_path}
+[alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/ual/simulation_ws/src/my_simulations/models
+```
+5. **Modify .world file, "include" your model**
+```console
+[alonzo@study ~/simulation_ws/src/my_simulations/world]$ vim empty_world.world
+# > Add : <uri>model://my1stmodel</uri>
+```
+
+6. **Launch**
+```console
+[alonzo@study ~/simulation_ws/src/my_simulations/world]$ roslaunch my_simulations my_world.launch 
+```
+## Source code
 * model.sdf
 ```xml
 <?xml version="1.0" ?>
