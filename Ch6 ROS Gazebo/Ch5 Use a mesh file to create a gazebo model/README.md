@@ -1,17 +1,22 @@
 ## How to use a mesh file to create a gazebo model
+1. **Create meshes folders**
 ```console
-1. Create meshes folders
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel/]$ mkdir meshes
+```
 
-2. Download .stl file from my github repo to /meshes folder
+2. **Download .stl file from my github repo to /meshes folder**
 
-3. Modify .sdf file, change box to mesh (Both <collision> and <visual>)
+3. __Modify .sdf file, change box to mesh (Both "collision" and "visual" tag)__
+```console
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel/]$ vim model.sdf 
+```
 
-4. Launch file
+4. **Launch file**
+```console
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel/]$ roslaunch my_simulations my_world.launch
 ```
 
+## Source code
 * model.sdf
 ```xml
 <?xml version="1.0" ?>
