@@ -46,7 +46,7 @@ $ roslaunch vrx_gazebo sandisland.launch urdf:=$HOME/my_wamv/my_wamv_2.urdf
 # Case 3
 $ roslaunch vrx_gazebo sandisland.launch urdf:=$HOME/my_wamv/my_wamv_3.urdf
 ```
-
+## Source code
 * sensor_config.yaml
 ```
 wamv_camera:
@@ -275,11 +275,11 @@ engine:
 </launch>
 ```
 
-* __Compliance rules__:
-  * All sensors must be contained within one of the sensor bounding boxes.
-  * All thrusters must be contained within one of the thruster bounding boxes. 
-  * The number of each sensor and thruster in the configuration must be within the limit.
-  * For thrusters, there can only be one thruster in each bounding box.
+## Compliance rules
+1. All sensors must be contained within one of the sensor bounding boxes.
+2. All thrusters must be contained within one of the thruster bounding boxes. 
+3. The number of each sensor and thruster in the configuration must be within the limit.
+4. For thrusters, there can only be one thruster in each bounding box.
 * If you call __generate_wamv.launch__ on __non-compliant configuration YAML files__, red error messages will be printed but the URDF file will still be created. However, it is not a valid configuration for the VRX competition.
 
 * `generate_wamv.launch`: (generate_wamv python exe => import configure_wamv.py)
@@ -289,7 +289,7 @@ engine:
   * Generate xacro files from YAML (YAML -> xacro)
   * Generate urdf file (xacro -> urdf -> robot)
   * In fact, it's configure_wamv.py doing all the stuff.(Compliance -> YAML -> xacro -> urdf)
-  * To know how to convert YAML to urdf, check out __configure_wamv.py__
+  * To understand how to convert YAML to urdf, check out __configure_wamv.py__
 
 * __Thruster/Sensor Required Parameters in thruster/sensor_config.yaml__
   * In __wamv_camera.xacro__: (Import/Use by generate_wamv/configure_wamv.py(?) to generate wamv urdf)
@@ -306,7 +306,7 @@ engine:
     * Default  params: position, orientation
 
 
-
+### Boundary & Limitations
 * Sensor bounding box:
 ```
 sensor_compliance_for:
