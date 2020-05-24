@@ -24,7 +24,7 @@ $ rosrun xacro xacro --inorder example_course.world.xacro > my_world.world
 
 6. **Run simulation**
 ```console
-roslaunch vrx_gazebo sandisland.launch world:=`pwd`/my_world.world
+$ roslaunch vrx_gazebo sandisland.launch world:=`pwd`/my_world.world
 ```
 
 ## Source code
