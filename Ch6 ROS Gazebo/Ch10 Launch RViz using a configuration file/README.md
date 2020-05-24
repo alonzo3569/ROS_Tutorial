@@ -1,24 +1,27 @@
 ## Launch RViz using a configuration file 
 * __.rviz configuration file :__ Save rviz config so that you don't have to reconfigure after roslaunch.
+
+1. **Launch rviz**
 ```console
-1. Launch rviz
 [alonzo@study ~/simulation_ws/src/my_robot_description]$ roslaunch my_robot_description rviz.launch
+```
+2. **Configure your rviz in GUI**
 
-2. Configure your rviz in GUI
+3. **Select "Save config as" option**
 
-3. Select "Save config as" option
+4. **Store .rivz in ~/simulation_ws/src/my_robot_description/rviz**
 
-4. Store .rivz in ~/simulation_ws/src/my_robot_description/rviz
+5. **Name it (robot.rviz)**
 
-5. Name it (robot.rviz)
-
-6. Edit rviz.launch file
+6. **Edit rviz.launch file**
+```console
 [alonzo@study ~/simulation_ws/src/my_robot_description/launch]$ vim rviz.launch
-
-7. Relaunch
+```
+7. **Relaunch**
+```console
 [alonzo@study ~/simulation_ws/src/my_robot_description/launch]$ roslaunch my_robot_description rviz.launch
 ```
-
+## Source code
 * rviz.launch
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -38,7 +41,6 @@
   <!-- Show in Rviz   -->
   <!-- Same as rosrun rviz rviz   -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_robot_description)/rviz/robot.rviz"/>
-
 
 </launch>
 ```
