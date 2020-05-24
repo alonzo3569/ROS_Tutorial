@@ -306,7 +306,7 @@ engine:
     * Default  params: position, orientation
 
 
-### Boundary & Limitations
+## Boundary & Limitations
 * Sensor bounding box:
 ```
 sensor_compliance_for:
