@@ -8,7 +8,7 @@
 2. **Create a New Image**
 
 3. __Select Width and Height value (2**n+1: 129/129, 257/257, 513/513)__
-* __Note :__ Gazebo requires these values be equal
+    * __Note :__ Gazebo requires these values be equal
 
 4. **White is high & Black is low. Thus, start with all black**
 
