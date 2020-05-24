@@ -366,7 +366,7 @@ roslaunch vrx_gazebo sandisland.launch world:=`pwd`/my_world.world
   * Define functions, store variables(macros). 
 * The VRX packages make heavy use of xacro to reduce code reuse and make composing new models/worlds easy.
 
-* __Generating XML from xacro__
+### Generating XML from xacro
   * __From Terminal:__ To generate `my_wamv.urdf` from `my_wamv.urdf.xacro`, run this command:  
   `$ rosrun xacro xacro --inorder my_wamv.urdf.xacro -o my_wamv.urdf`
   * __In CMakeLists.txt:__ (Allows you to find this issue at build time, not runtime)
@@ -391,9 +391,9 @@ roslaunch vrx_gazebo sandisland.launch world:=`pwd`/my_world.world
   </launch>
   ```
 
-* __Using Macros__  
+### Using Macros  
 Here is an example macro included to create a gazebo camera sensor with the ROS plugin.
-* wamv_camera.xacro (ROS plugin/Xacro template)
+* __wamv_camera.xacro__ (ROS plugin/Xacro template)
 ```xml
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
@@ -408,7 +408,7 @@ Here is an example macro included to create a gazebo camera sensor with the ROS 
   </xacro:macro>
 </robot>
 ```
-* .urdf file
+* __.urdf file__
 ```xml
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
