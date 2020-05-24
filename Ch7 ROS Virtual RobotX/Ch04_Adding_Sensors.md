@@ -2,12 +2,12 @@
 
 Create your own robot description file (URDF) for a custom WAM-V with your choice of sensors. 
 
-1. Copy `wamv_gazebo wamv_gazebo.urdf.xacro`
+1. **Copy `wamv_gazebo wamv_gazebo.urdf.xacro`**
 ```console
 $ roscp wamv_gazebo wamv_gazebo.urdf.xacro my_wamv.urdf.xacro
 ```
 
-2. Modify `my_wamv.urdf.xacro` (Remove all sensors on wamv and add lines below)
+2. **Modify `my_wamv.urdf.xacro` (Remove all sensors on wamv and add lines below)**
 ```xml
   <xacro:property name="stereo_x" value="1.0" />
   <xacro:wamv_camera name="stereo_left" x="${stereo_x}" y="0.3" z="1.5" P="${radians(15)}" />
@@ -19,11 +19,11 @@ $ roscp wamv_gazebo wamv_gazebo.urdf.xacro my_wamv.urdf.xacro
   * The x,y,z and P (pitch) set where the cameras are located **relative to the WAM-V base link**
   * A Python expression ${radians(15)} was used to convert 15 degrees to radians
 
-3. Compile xacro file
+3. **Compile xacro file**
 ```console
 $ rosrun xacro xacro --inorder my_wamv.urdf.xacro > my_wamv.urdf
 ```
-4. Launch
+4. **Launch**
 ```console
 $ roslaunch vrx_gazebo sandisland.launch urdf:=`pwd`/my_wamv.urdf
 ```
