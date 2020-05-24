@@ -1,23 +1,27 @@
 ## How to use an image file as texture for gazebo model
+1. **Create materials/scripts and materials/textures folder**
 ```console
-1. Create materials/scripts and materials/textures folder
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel/]$ mkdir scripts texture
-
-2. touch .material file in scripts folder
+```
+2. **Touch .material file in scripts folder**
+```console
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel/scripts]$ touch robot_car.material
-
-3. Edit .material file
+```
+3. **Edit .material file**
+```console
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel/scripts]$ vim robot_car.material
+```
+4. **Download .png file from my github repo and store it inside the texture folder**
 
-4. Download .png file from my github repo and store it inside the texture folder
-
-5. Modify .sdf file <visual>
+5. **Modify .sdf file "visual" tag**
+```console
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel]$ vim model.sdf
-
-6. Launch
+```
+6. **Launch**
+```console
 [alonzo@study ~/simulation_ws/src/my_simulations/models/my1stmodel/]$ roslaunch my_simulations my_world.launch
 ```
-
+## Source code
 * robot_car.material
 ```console
 material robot_car/Diffuse  # name of your material
