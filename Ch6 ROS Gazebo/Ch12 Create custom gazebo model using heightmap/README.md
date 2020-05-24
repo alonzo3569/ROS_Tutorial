@@ -1,37 +1,44 @@
 ## Gazebo Heightmap tutorial
 
-1. Install GIMP
-https://tecadmin.net/install-gimp-on-ubuntu/
+1. **Install** [**GIMP**][0]
 
-2. Create a New Image
+[0]: https://tecadmin.net/install-gimp-on-ubuntu/
 
-3. Select Width and Height value (2**n+1: 129/129, 257/257, 513/513)
-Note : Gazebo requires these values be equal
 
-4. White is high & Black is low. Thus, start with all black.
+2. **Create a New Image**
 
-5. Draw your terrain.
+3. __Select Width and Height value (2**n+1: 129/129, 257/257, 513/513)__
+* __Note :__ Gazebo requires these values be equal
 
-6. Export as .png file
+4. **White is high & Black is low. Thus, start with all black**
 
-7. In ~/.gazebo/models directory, these are models that you used in the past 
-cd ~/.gazebo/models
+5. **Draw your terrain**
 
-8. Create a folder for your model
-mkdir ~/.gazebo/models/custom_lake
+6. **Export as .png file**
 
-9. Copy model.sdf & model.config from other model
-cp -rp ~/.gazebo/models/playground ~/.gazebo/models/custom_lake
+7. **In ~/.gazebo/models directory, these are models that you used in the past**
+```console
+$ cd ~/.gazebo/models
+```
+8. **Create a folder for your model**
+```console
+$ mkdir ~/.gazebo/models/custom_lake
+```
+9. **Copy model.sdf & model.config from other model**
+```console
+$ cp -rp ~/.gazebo/models/playground ~/.gazebo/models/custom_lake
+```
 
-10. Overwrite model.sdf file
-cp /usr/share/gazebo-9/worlds/heightmap.world model.sdf
+10. **Overwrite model.sdf file**
+```console
+$ cp /usr/share/gazebo-9/worlds/heightmap.world model.sdf
+```
 
-11. Edit model.sdf file. Remove <world> tag and "sun" model
+11. **Edit model.sdf file. Remove <world> tag and "sun" model**
 
-12. Remove all the "box" model in model.sdf
+12. **Remove all the "box" model in model.sdf**
 
-13. 
-
+## Source code
 * model.sdf
 ```xml
 <?xml version="1.0" ?>
