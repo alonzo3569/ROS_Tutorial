@@ -15,12 +15,13 @@ $ mkdir worlds
 $ roscp vrx_gazebo example_course.world.xacro .
 ```
 
-4. **Generate the compiled XML from the xacro file ("compile" your xacro files into static XML)**
+4. **Modify .xcro file (Add new module)**
+
+
+5. **Generate the compiled XML from the xacro file ("compile" your xacro files into static XML)**
 ```console
 $ rosrun xacro xacro --inorder example_course.world.xacro > my_world.world
 ```
-
-5. **Modify .xcro file (Add new module)**
 
 6. **Run simulation**
 ```console
