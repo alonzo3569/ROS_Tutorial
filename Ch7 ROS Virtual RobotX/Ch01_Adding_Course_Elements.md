@@ -12,7 +12,7 @@ $ mkdir worlds
 
 3. **Copy .xacro file from source pkg**
 ```console
-$ $ roscp vrx_gazebo example_course.world.xacro .
+$ roscp vrx_gazebo example_course.world.xacro .
 ```
 
 4. **Generate the compiled XML from the xacro file ("compile" your xacro files into static XML)**
