@@ -1,6 +1,6 @@
 ## Driving
 
-1. Launch simulation
+1. **Launch simulation**
 ```console
 $ roslaunch vrx_gazebo sandisland.launch
 ```
