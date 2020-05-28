@@ -4,6 +4,7 @@
 [alonzo@study ~]$ mkdir -p simulation_ws/src
 [alonzo@study ~/simulation_ws/src]$ catkin_create_pkg my_simulations # No dependencies
 [alonzo@study ~/simulation_ws]$ catkin_make
+[alonzo@study ~/simulation_ws]$ source ~/simulation_ws/devel/setup.bash
 ```
 2. **Create launch and world folder**
 ```console
