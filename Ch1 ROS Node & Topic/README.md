@@ -63,11 +63,11 @@
 
       rospy.loginfo("This node has been started") # log features for ros 
 
-      rate = rospy.Rate(10) # 
+      rate = rospy.Rate(10) # 10 Hz
 
       while not rospy.is_shutdown():
           rospy.loginfo("Hello")
-          rate.sleep(1)
+          rate.sleep()
 
       rospy.loginfo("Exit now")
   ```
